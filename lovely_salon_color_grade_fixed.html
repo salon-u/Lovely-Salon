@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lovely Salon | Hair, Beauty & Makeup Studio in Mohaddipur, Gorakhpur</title>
+  <meta name="description" content="Lovely Salon in Mohaddipur, Gorakhpur offers hair styling, beauty care, makeup, facials, grooming and salon services. Call or book on WhatsApp." />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <style>
+    :root{
+      --ivory:#fffaf3;
+      --cream:#fff2e7;
+      --rosewood:#9b4c5b;
+      --rosewood-dark:#5b2430;
+      --mauve:#c98292;
+      --champagne:#d9ad75;
+      --mocha:#6f4d43;
+      --ink:#2b1d22;
+      --soft:#8d6e6c;
+      --card:#fffdf9;
+      --line:rgba(155,76,91,.16);
+      --shadow:0 24px 70px rgba(91,36,48,.14);
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      font-family:'Manrope',sans-serif;
+      color:var(--ink);
+      background:
+        radial-gradient(circle at 12% 10%, rgba(217,173,117,.25), transparent 28%),
+        radial-gradient(circle at 88% 4%, rgba(201,130,146,.26), transparent 30%),
+        linear-gradient(135deg,#fffaf3 0%,#fff4ea 46%,#fde8e6 100%);
+      overflow-x:hidden;
+    }
+    body:before{
+      content:"";
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      z-index:-1;
+      opacity:.42;
+      background-image:
+        linear-gradient(rgba(91,36,48,.035) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(91,36,48,.035) 1px,transparent 1px);
+      background-size:44px 44px;
+      mask-image:linear-gradient(to bottom,black,transparent 85%);
+    }
+
+    .display{font-family:'Cormorant Garamond',serif}
+    .nav-glass{
+      background:rgba(255,250,243,.82);
+      border-bottom:1px solid var(--line);
+      backdrop-filter:blur(18px);
+    }
+    .shell{max-width:1180px;margin:auto;padding-left:22px;padding-right:22px}
+    .soft-card{
+      background:rgba(255,253,249,.84);
+      border:1px solid var(--line);
+      box-shadow:var(--shadow);
+    }
+    .cream-card{
+      background:linear-gradient(145deg,rgba(255,253,249,.92),rgba(255,242,231,.84));
+      border:1px solid rgba(217,173,117,.25);
+    }
+    .btn-primary{
+      background:linear-gradient(135deg,var(--rosewood-dark),var(--rosewood) 56%,var(--champagne));
+      color:#fff;
+      box-shadow:0 16px 36px rgba(155,76,91,.26);
+    }
+    .btn-light{
+      background:rgba(255,255,255,.72);
+      border:1px solid rgba(155,76,91,.2);
+      color:var(--rosewood-dark);
+    }
+    .tag{
+      background:rgba(255,255,255,.62);
+      border:1px solid rgba(155,76,91,.18);
+      color:var(--rosewood-dark);
+    }
+    .accent-line{
+      width:72px;height:3px;border-radius:99px;
+      background:linear-gradient(90deg,var(--rosewood),var(--champagne));
+    }
+    .lift{transition:.35s ease}
+    .lift:hover{transform:translateY(-8px);box-shadow:0 26px 76px rgba(91,36,48,.17)}
+    .reveal{opacity:0;transform:translateY(28px);transition:.75s ease}
+    .reveal.show{opacity:1;transform:none}
+    .float{animation:float 5.8s ease-in-out infinite}
+    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+    .pulse-ring{animation:pulseRing 2s infinite}
+    @keyframes pulseRing{0%{box-shadow:0 0 0 0 rgba(37,211,102,.5)}70%{box-shadow:0 0 0 18px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
+
+    .hero-blob{
+      position:absolute;
+      inset:auto -80px -70px auto;
+      width:260px;height:260px;border-radius:999px;
+      background:radial-gradient(circle,rgba(217,173,117,.46),rgba(201,130,146,.16),transparent 72%);
+      filter:blur(2px);
+    }
+    .service-icon{
+      width:58px;height:58px;border-radius:22px;
+      display:flex;align-items:center;justify-content:center;
+      background:linear-gradient(145deg,#fff3ec,#f7d5d5);
+      color:var(--rosewood);
+      box-shadow:inset 0 0 0 1px rgba(155,76,91,.14);
+    }
+    .price-pill{
+      background:rgba(217,173,117,.16);
+      color:var(--rosewood-dark);
+      border:1px solid rgba(217,173,117,.35);
+    }
+    .gallery-img{filter:saturate(.92) contrast(1.03) brightness(1.01)}
+    .section-title{font-size:clamp(2.4rem,5vw,4.8rem);line-height:.95}
+    .hero-title{font-size:clamp(3.1rem,7vw,6.9rem);line-height:.86;letter-spacing:-.04em}
+    .muted{color:var(--soft)}
+
+    @media(max-width:768px){
+      .shell{padding-left:16px;padding-right:16px}
+      .hero-title{letter-spacing:-.025em}
+    }
+  </style>
+</head>
+<body>
+
+  <header class="fixed top-0 left-0 right-0 z-50 nav-glass">
+    <div class="shell h-20 flex items-center justify-between">
+      <a href="#home" class="flex items-center gap-3">
+        <div class="w-12 h-12 rounded-2xl flex items-center justify-center text-white" style="background:linear-gradient(135deg,var(--rosewood-dark),var(--mauve));box-shadow:0 14px 32px rgba(155,76,91,.22)">
+          <i class="fa-solid fa-spa"></i>
+        </div>
+        <div>
+          <div class="display text-3xl font-bold leading-none text-[var(--rosewood-dark)]">Lovely Salon</div>
+          <div class="text-[10px] uppercase tracking-[.28em] muted mt-1">Hair • Beauty • Makeup</div>
+        </div>
+      </a>
+
+      <nav class="hidden lg:flex items-center gap-8 text-sm font-semibold text-[var(--mocha)]">
+        <a href="#services" class="hover:text-[var(--rosewood)]">Services</a>
+        <a href="#packages" class="hover:text-[var(--rosewood)]">Packages</a>
+        <a href="#gallery" class="hover:text-[var(--rosewood)]">Gallery</a>
+        <a href="#contact" class="hover:text-[var(--rosewood)]">Contact</a>
+      </nav>
+
+      <div class="hidden md:flex items-center gap-3">
+        <a href="tel:07985663996" class="px-5 py-3 rounded-full btn-light font-bold"><i class="fa-solid fa-phone mr-2"></i>Call</a>
+        <a href="https://wa.me/917985663996" target="_blank" class="px-5 py-3 rounded-full btn-primary font-bold"><i class="fa-brands fa-whatsapp mr-2"></i>Book Now</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="home" class="pt-28">
+    <section class="shell py-12 lg:py-20">
+      <div class="grid lg:grid-cols-[1.02fr_.98fr] gap-10 lg:gap-16 items-center">
+        <div class="reveal">
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full tag text-sm font-bold">
+            <span class="w-2.5 h-2.5 rounded-full" style="background:var(--champagne)"></span>
+            Beauty destination in Mohaddipur, Gorakhpur
+          </div>
+
+          <h1 class="display hero-title font-bold mt-7 text-[var(--rosewood-dark)]">
+            Glow softly.<br>
+            Look polished.<br>
+            Feel lovely.
+          </h1>
+
+          <p class="mt-7 text-lg md:text-xl leading-8 muted max-w-2xl">
+            Lovely Salon brings professional hair styling, beauty care and occasion-ready makeup in a calm, clean and elegant salon experience.
+          </p>
+
+          <div class="mt-9 flex flex-wrap gap-4">
+            <a href="tel:07985663996" class="px-7 py-4 rounded-full btn-primary font-extrabold">
+              <i class="fa-solid fa-phone mr-2"></i> Call 079856 63996
+            </a>
+            <a href="https://www.google.com/maps/place/Lovely+Salon/@26.7515355,83.3956876,17z/data=!3m1!4b1!4m6!3m5!1s0x39914497a55ae95f:0x7fda4969b4c2adb4!8m2!3d26.7515355!4d83.3982625!16s%2Fg%2F11c58s9n_9?entry=ttu" target="_blank" class="px-7 py-4 rounded-full btn-light font-extrabold">
+              <i class="fa-solid fa-location-dot mr-2"></i> Get Directions
+            </a>
+          </div>
+
+          <div class="grid grid-cols-3 gap-3 sm:gap-4 mt-10 max-w-xl">
+            <div class="cream-card rounded-3xl p-5">
+              <div class="display text-3xl font-bold text-[var(--rosewood-dark)]">Hair</div>
+              <p class="text-xs muted mt-1">Cut • Color • Styling</p>
+            </div>
+            <div class="cream-card rounded-3xl p-5">
+              <div class="display text-3xl font-bold text-[var(--rosewood-dark)]">Skin</div>
+              <p class="text-xs muted mt-1">Facial • Cleanup</p>
+            </div>
+            <div class="cream-card rounded-3xl p-5">
+              <div class="display text-3xl font-bold text-[var(--rosewood-dark)]">Makeup</div>
+              <p class="text-xs muted mt-1">Party • Bridal</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative reveal">
+          <div class="hero-blob"></div>
+          <div class="soft-card rounded-[2.2rem] p-4 relative overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&w=1300&q=85" alt="Lovely Salon hair and beauty styling" class="gallery-img w-full h-[520px] object-cover rounded-[1.75rem] float" />
+            <div class="absolute left-8 right-8 bottom-8 rounded-[1.5rem] bg-white/86 backdrop-blur-xl border border-white/60 p-5 shadow-xl">
+              <div class="flex items-center justify-between gap-4">
+                <div>
+                  <p class="text-xs uppercase tracking-[.22em] muted font-bold">Walk in or book</p>
+                  <h3 class="display text-3xl font-bold text-[var(--rosewood-dark)] mt-1">Ready for your glow-up</h3>
+                </div>
+                <a href="https://wa.me/917985663996" target="_blank" class="w-14 h-14 rounded-2xl bg-green-500 text-white flex items-center justify-center text-2xl shrink-0">
+                  <i class="fa-brands fa-whatsapp"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="shell pb-10">
+      <div class="grid md:grid-cols-3 gap-5">
+        <div class="soft-card rounded-[1.8rem] p-6 reveal lift">
+          <i class="fa-solid fa-wand-magic-sparkles text-2xl text-[var(--rosewood)]"></i>
+          <h3 class="font-extrabold text-xl mt-4">Polished finish</h3>
+          <p class="muted mt-2 leading-7">Clean styling, balanced beauty work and a presentable finish for daily and occasion looks.</p>
+        </div>
+        <div class="soft-card rounded-[1.8rem] p-6 reveal lift">
+          <i class="fa-solid fa-calendar-check text-2xl text-[var(--rosewood)]"></i>
+          <h3 class="font-extrabold text-xl mt-4">Easy appointment</h3>
+          <p class="muted mt-2 leading-7">Call or book on WhatsApp and confirm your visit without waiting for long follow-ups.</p>
+        </div>
+        <div class="soft-card rounded-[1.8rem] p-6 reveal lift">
+          <i class="fa-solid fa-map-location-dot text-2xl text-[var(--rosewood)]"></i>
+          <h3 class="font-extrabold text-xl mt-4">Mohaddipur location</h3>
+          <p class="muted mt-2 leading-7">Located in Mohaddipur, Gorakhpur with quick directions available through Google Maps.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="shell py-20">
+      <div class="max-w-3xl reveal">
+        <div class="accent-line"></div>
+        <h2 class="display section-title font-bold mt-5 text-[var(--rosewood-dark)]">Services made for everyday beauty and special days.</h2>
+        <p class="mt-6 text-lg leading-8 muted">Choose from grooming, hair styling, skincare and makeup services designed to make your visit simple and satisfying.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 xl:grid-cols-4 gap-5 mt-12">
+        <article class="soft-card rounded-[2rem] p-7 reveal lift">
+          <div class="service-icon"><i class="fa-solid fa-scissors text-xl"></i></div>
+          <h3 class="display text-3xl font-bold mt-6 text-[var(--rosewood-dark)]">Hair Styling</h3>
+          <p class="muted leading-7 mt-3">Haircut, blow dry, styling, color touch-ups and smooth finish looks.</p>
+        </article>
+        <article class="soft-card rounded-[2rem] p-7 reveal lift">
+          <div class="service-icon"><i class="fa-solid fa-hand-sparkles text-xl"></i></div>
+          <h3 class="display text-3xl font-bold mt-6 text-[var(--rosewood-dark)]">Beauty Care</h3>
+          <p class="muted leading-7 mt-3">Facials, cleanups, threading, waxing and skin freshness services.</p>
+        </article>
+        <article class="soft-card rounded-[2rem] p-7 reveal lift">
+          <div class="service-icon"><i class="fa-solid fa-palette text-xl"></i></div>
+          <h3 class="display text-3xl font-bold mt-6 text-[var(--rosewood-dark)]">Makeup</h3>
+          <p class="muted leading-7 mt-3">Party makeup, engagement look, bridal-ready glow and event styling.</p>
+        </article>
+        <article class="soft-card rounded-[2rem] p-7 reveal lift">
+          <div class="service-icon"><i class="fa-solid fa-spa text-xl"></i></div>
+          <h3 class="display text-3xl font-bold mt-6 text-[var(--rosewood-dark)]">Grooming</h3>
+          <p class="muted leading-7 mt-3">Complete grooming, hair care, beauty touch-ups and salon maintenance.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="packages" class="py-20" style="background:linear-gradient(180deg,rgba(255,255,255,.35),rgba(255,242,231,.72));border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+      <div class="shell">
+        <div class="grid lg:grid-cols-[.85fr_1.15fr] gap-10 items-start">
+          <div class="reveal lg:sticky lg:top-28">
+            <div class="accent-line"></div>
+            <h2 class="display section-title font-bold mt-5 text-[var(--rosewood-dark)]">Popular picks.</h2>
+            <p class="mt-5 text-lg leading-8 muted">Use these as quick starting choices. Final pricing can be confirmed after consultation at the salon.</p>
+          </div>
+
+          <div class="grid sm:grid-cols-2 gap-5">
+            <div class="soft-card rounded-[2rem] p-7 reveal lift">
+              <div class="price-pill inline-flex px-4 py-2 rounded-full text-sm font-extrabold">Everyday</div>
+              <h3 class="display text-3xl font-bold mt-6 text-[var(--rosewood-dark)]">Hair Refresh</h3>
+              <p class="muted mt-3 leading-7">Haircut, wash, blow dry or styling for a neat salon-fresh look.</p>
+              <a href="tel:07985663996" class="inline-flex mt-6 font-extrabold text-[var(--rosewood)]">Ask price <i class="fa-solid fa-arrow-right ml-2 mt-1"></i></a>
+            </div>
+            <div class="soft-card rounded-[2rem] p-7 reveal lift">
+              <div class="price-pill inline-flex px-4 py-2 rounded-full text-sm font-extrabold">Glow</div>
+              <h3 class="display text-3xl font-bold mt-6 text-[var(--rosewood-dark)]">Beauty Cleanup</h3>
+              <p class="muted mt-3 leading-7">Quick facial cleanup and grooming for fresh, clean skin feel.</p>
+              <a href="tel:07985663996" class="inline-flex mt-6 font-extrabold text-[var(--rosewood)]">Ask price <i class="fa-solid fa-arrow-right ml-2 mt-1"></i></a>
+            </div>
+            <div class="soft-card rounded-[2rem] p-7 reveal lift">
+              <div class="price-pill inline-flex px-4 py-2 rounded-full text-sm font-extrabold">Event</div>
+              <h3 class="display text-3xl font-bold mt-6 text-[var(--rosewood-dark)]">Party Look</h3>
+              <p class="muted mt-3 leading-7">Makeup and hair styling for parties, functions and photo-ready moments.</p>
+              <a href="https://wa.me/917985663996" target="_blank" class="inline-flex mt-6 font-extrabold text-[var(--rosewood)]">Book on WhatsApp <i class="fa-solid fa-arrow-right ml-2 mt-1"></i></a>
+            </div>
+            <div class="soft-card rounded-[2rem] p-7 reveal lift">
+              <div class="price-pill inline-flex px-4 py-2 rounded-full text-sm font-extrabold">Special</div>
+              <h3 class="display text-3xl font-bold mt-6 text-[var(--rosewood-dark)]">Bridal Enquiry</h3>
+              <p class="muted mt-3 leading-7">Discuss your bridal look, timing, styling needs and complete beauty plan.</p>
+              <a href="https://wa.me/917985663996" target="_blank" class="inline-flex mt-6 font-extrabold text-[var(--rosewood)]">Send enquiry <i class="fa-solid fa-arrow-right ml-2 mt-1"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="shell py-20">
+      <div class="text-center max-w-3xl mx-auto reveal">
+        <div class="accent-line mx-auto"></div>
+        <h2 class="display section-title font-bold mt-5 text-[var(--rosewood-dark)]">A calm salon mood with a polished finish.</h2>
+        <p class="mt-5 text-lg leading-8 muted">A soft, premium visual style for hair, beauty and makeup services.</p>
+      </div>
+
+      <div class="grid md:grid-cols-4 gap-4 mt-12">
+        <img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=700&q=85" alt="Makeup service" class="gallery-img rounded-[2rem] h-72 md:h-[420px] w-full object-cover md:col-span-2 reveal lift" />
+        <img src="https://images.unsplash.com/photo-1560869713-da86a9ec4d76?auto=format&fit=crop&w=700&q=85" alt="Salon styling" class="gallery-img rounded-[2rem] h-72 w-full object-cover reveal lift" />
+        <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=700&q=85" alt="Beauty products" class="gallery-img rounded-[2rem] h-72 w-full object-cover reveal lift" />
+        <img src="https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?auto=format&fit=crop&w=700&q=85" alt="Makeup brushes" class="gallery-img rounded-[2rem] h-72 w-full object-cover reveal lift" />
+        <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=700&q=85" alt="Salon interior" class="gallery-img rounded-[2rem] h-72 md:h-[420px] w-full object-cover md:col-span-2 reveal lift" />
+        <div class="soft-card rounded-[2rem] p-8 flex flex-col justify-between reveal lift">
+          <div>
+            <p class="text-xs uppercase tracking-[.24em] muted font-bold">Visit us</p>
+            <h3 class="display text-4xl font-bold mt-3 text-[var(--rosewood-dark)]">Mohaddipur, Gorakhpur</h3>
+          </div>
+          <a href="https://www.google.com/maps/place/Lovely+Salon/@26.7515355,83.3956876,17z/data=!3m1!4b1!4m6!3m5!1s0x39914497a55ae95f:0x7fda4969b4c2adb4!8m2!3d26.7515355!4d83.3982625!16s%2Fg%2F11c58s9n_9?entry=ttu" target="_blank" class="mt-8 px-5 py-4 rounded-full btn-primary text-center font-extrabold">Open Map</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="shell py-20">
+      <div class="soft-card rounded-[2.5rem] overflow-hidden reveal">
+        <div class="grid lg:grid-cols-[.88fr_1.12fr]">
+          <div class="p-8 md:p-12" style="background:linear-gradient(145deg,rgba(91,36,48,.96),rgba(155,76,91,.9));color:white">
+            <p class="text-sm uppercase tracking-[.24em] text-white/70 font-bold">Book your visit</p>
+            <h2 class="display text-5xl md:text-6xl font-bold mt-5 leading-none">Ready for a salon day?</h2>
+            <p class="mt-6 text-white/78 leading-8 text-lg">Call Lovely Salon or message on WhatsApp to ask about services, timing and appointment availability.</p>
+
+            <div class="mt-9 space-y-5">
+              <a href="tel:07985663996" class="flex items-center gap-4 bg-white/12 border border-white/18 rounded-3xl p-5 hover:bg-white/18 transition">
+                <span class="w-12 h-12 rounded-2xl bg-white text-[var(--rosewood-dark)] flex items-center justify-center"><i class="fa-solid fa-phone"></i></span>
+                <span>
+                  <span class="block text-white/65 text-sm">Call</span>
+                  <strong class="text-xl">079856 63996</strong>
+                </span>
+              </a>
+
+              <a href="https://wa.me/917985663996" target="_blank" class="flex items-center gap-4 bg-white/12 border border-white/18 rounded-3xl p-5 hover:bg-white/18 transition">
+                <span class="w-12 h-12 rounded-2xl bg-green-500 text-white flex items-center justify-center"><i class="fa-brands fa-whatsapp"></i></span>
+                <span>
+                  <span class="block text-white/65 text-sm">WhatsApp</span>
+                  <strong class="text-xl">Book appointment</strong>
+                </span>
+              </a>
+
+              <div class="flex items-start gap-4 bg-white/12 border border-white/18 rounded-3xl p-5">
+                <span class="w-12 h-12 rounded-2xl bg-white text-[var(--rosewood-dark)] flex items-center justify-center shrink-0"><i class="fa-solid fa-location-dot"></i></span>
+                <span>
+                  <span class="block text-white/65 text-sm">Address</span>
+                  <strong class="text-lg leading-7">Mohaddipur, Gorakhpur, Uttar Pradesh 273008</strong>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-4 bg-[#fffaf3]">
+            <iframe title="Lovely Salon Google Map" src="https://www.google.com/maps?q=Lovely%20Salon%2C%20Mohaddipur%2C%20Gorakhpur%2C%20Uttar%20Pradesh%20273008&output=embed" class="w-full h-[520px] rounded-[2rem] border-0" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="py-12" style="background:#fff6ef;border-top:1px solid var(--line)">
+    <div class="shell">
+      <div class="flex flex-col md:flex-row justify-between gap-8 items-start md:items-center">
+        <div>
+          <h3 class="display text-4xl font-bold text-[var(--rosewood-dark)]">Lovely Salon</h3>
+          <p class="muted mt-2">Hair • Beauty • Makeup • Grooming</p>
+        </div>
+        <div class="flex flex-wrap gap-3">
+          <a href="tel:07985663996" class="px-5 py-3 rounded-full btn-light font-bold">Call Now</a>
+          <a href="https://wa.me/917985663996" target="_blank" class="px-5 py-3 rounded-full btn-primary font-bold">WhatsApp</a>
+          <a href="https://www.google.com/maps/place/Lovely+Salon/@26.7515355,83.3956876,17z/data=!3m1!4b1!4m6!3m5!1s0x39914497a55ae95f:0x7fda4969b4c2adb4!8m2!3d26.7515355!4d83.3982625!16s%2Fg%2F11c58s9n_9?entry=ttu" target="_blank" class="px-5 py-3 rounded-full btn-light font-bold">Directions</a>
+        </div>
+      </div>
+      <div class="mt-9 pt-6 border-t border-[var(--line)] flex flex-col md:flex-row justify-between gap-3 text-sm muted">
+        <p>© 2026 Lovely Salon. All Rights Reserved.</p>
+        <p>Mohaddipur, Gorakhpur, Uttar Pradesh 273008</p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/917985663996" target="_blank" class="fixed bottom-6 right-6 z-50 w-16 h-16 rounded-full bg-green-500 text-white flex items-center justify-center text-3xl shadow-2xl pulse-ring" aria-label="Book on WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <script>
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries)=>{
+      entries.forEach((entry)=>{
+        if(entry.isIntersecting){ entry.target.classList.add('show'); }
+      });
+    },{threshold:.14});
+    reveals.forEach((el)=>observer.observe(el));
+  </script>
+</body>
+</html>
